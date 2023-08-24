@@ -1,0 +1,503 @@
+:root {
+    --bs-main: #30A4B8;
+    --bs-black: #000000;
+    --bs-section: #01060F;
+}
+
+::selection {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.mybtn {
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    color: white;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+    border: none;
+    transition: 0.3s;
+    z-index: 3;
+    background-color: var(--bs-main);
+    display: none;
+}
+
+.mybtn:hover {
+    opacity: 0.5;
+}
+
+
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* start nav */
+
+
+.navbar img {
+    width: 220px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+    transition: 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--bs-main); 
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+    border: 1px solid white;
+}
+/* end nav */
+
+/* start home */
+.carousel-item {
+    max-height: calc(100vh - 78px);
+}
+
+.carousel-item .texts {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-10%, -50%);
+}
+
+.carousel-item .texts .shape {
+    letter-spacing: 5px;
+}
+
+.carousel-item .texts span {
+    color: var(--bs-main);
+}
+
+.btn {
+    font-weight: 700;
+    border: none;
+    background-color: var(--bs-main);
+    transition: 0.3s;
+}   
+
+.btn:hover {
+    background-color: #031519;
+    transform: scale(1.1);
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 320px) {
+    .carousel-item .texts h3 {
+        display: none;
+    }
+}
+
+@media (max-width : 285px) {
+    .carousel-item .texts {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-30%, -50%);
+    }
+    
+}
+/* end home */
+
+/* start about first sec */
+.about img {
+    width: 500px;
+    height: 600px;
+}
+
+
+
+.about {
+    background-color: var(--bs-black);
+    color: var(--bs-main);
+}
+
+.about .accordion-button {
+    color: white;
+    background-color: var(--bs-black);
+}
+
+/* end about first sec */
+
+/* start about second sec */
+.second-sec {
+    background-color: var(--bs-section);
+}
+
+.second-sec span {
+    position: relative;
+    padding-left: 65px;
+    letter-spacing: 4px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.second-sec span::before {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 2px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--bs-main);
+}
+
+.second-sec .feat .icon {
+    color: var(--bs-main);
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    padding: 7px 12px;
+    transition: 0.3s;
+}
+
+.second-sec .feat .content h3 {
+    letter-spacing: -2px;
+}
+
+.second-sec .feat .icon::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 0;
+    top: 0;
+    background-color: var(--bs-black);
+    opacity: 0.3;
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+
+@media (max-width:576px) {
+    .second-sec .feat .icon::before {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.second-sec .feat .content h3,
+.second-sec .feat .icon::before {
+    transition: 0.3s;
+}
+
+.second-sec .feat .content:hover h3 {
+    color: var(--bs-main);
+}
+
+/* end about second sec */
+
+/* start details */
+.details {
+    background-color: var(--bs-black);
+    border-top: 2px solid var(--bs-section);
+}
+
+.details h1 {
+    color: var(--bs-main);
+}
+
+.details .how {
+    background-color: white;
+    padding: 25px 25px;
+}
+
+.details .how h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.details .how svg {
+    color: var(--bs-main);
+    font-size: 60px;
+    background-color: rgb(253 236 237);
+    padding: 15px 12px;
+    border-radius: 5px;
+}
+
+.details .how,
+.details .how svg,
+.details .how h4,
+.details .how p {
+    transition: 0.3s;
+}
+
+
+.details .how:hover svg,
+.details .how:hover h4,
+.details .how:hover p {
+    color: white;
+}
+
+.details .how:hover {
+    background-color: var(--bs-main);
+}
+
+.details .how:hover svg {
+    color: var(--bs-black);
+}
+/* end details */
+
+/* start program */
+.program {
+    background-color: var(--bs-section);
+}
+
+.program .text span {
+    position: relative;
+    padding-left: 65px;
+    letter-spacing: 4px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.program .text span::before {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 2px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--bs-main);
+}
+
+.program .feat svg {
+    color: var(--bs-main);
+    background-color: var(--bs-black);
+    padding: 20px 20px;
+    border-radius: 50%;
+}
+
+.program .feat .content h3 {
+    transition: 0.3s;
+}
+
+.program .feat .content:hover h3 {
+    color: var(--bs-main);
+}
+
+.program .content h3 {
+    letter-spacing: -2px;
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .program .images .img-1 {
+        margin-top: 160px;
+    }
+    .program .images .img-2 {
+        margin-top: 200px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .program .images .img-2 {
+        margin-top: 60px;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .program .images {
+        display: none;
+    }
+}
+
+/* end program */
+
+/* start package */
+.package {
+    background-color: var(--bs-black);
+}
+
+.package .text h1 {
+    color: var(--bs-main);
+}
+/* end package */
+
+/* start transformation */
+.transformation {
+    background-color: var(--bs-black);
+}
+
+.transformation h1 {
+    color: var(--bs-main);
+}
+/* end transformation */
+
+/* start footer */
+.footer {
+    background-color: var(--bs-section);
+    padding-top: 100px;
+    padding-bottom: 8px;
+}
+
+.footer h4 {
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer h4::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: var(--bs-main);
+    left: 0;
+    bottom: -20px;
+}
+
+.footer .feat svg {
+    color: var(--bs-main);
+    background-color: rgb(95, 10, 10);
+    padding: 20px 20px;
+    border-radius: 50%;
+}
+
+.footer p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer .feat .content span {
+    cursor: pointer;
+    color: var(--bs-main);
+}
+
+.footer .icons svg {
+    padding: 8px 12px;
+    background-color: var(--bs-main);
+    margin-right: 12px;
+    border-radius: 3px;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer .icons svg:hover {
+    cursor: pointer;
+    color: var(--bs-main);
+    background-color: white;
+}
+
+.footer .first .content p {
+    margin-top: 20px;
+}
+
+.footer .third a {
+    margin-left: -28px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer .third a:hover {
+    color: var(--bs-main);
+}
+
+@media (max-width: 576px) {
+    .footer .first .content p {
+        margin-top: 24px;
+    }
+    .footer .second {
+        margin-top: 30px;
+    }
+    .footer .third {
+        margin-top: 30px;
+    }
+    .footer .third a {
+        margin-left: -6px;
+    }
+    .footer .third li {
+        margin-left: -16px;
+    }
+    .footer .forth {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .footer .second {
+        margin-top: 25px;
+    }
+    .footer .third {
+        margin-top: 25px;
+    }
+}
+
+@media (min-width: 578px) and (max-width: 991px) {
+    .footer .third {
+        margin-top: 25px;
+    }
+    .footer .forth {
+        margin-top: 25px;
+    }
+}
+/* end footer */
+
+/* start bmi */
+.bmi {
+    background-color: var(--bs-black);
+}
+
+.bmi input {
+    border: none;
+    outline: none; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+    font-weight: bold;
+}
+
+.bmi .head {
+    color: var(--bs-main);
+}
+
+.bmi .last {
+    color: white;
+    height: 80px;
+    background-color: hsl(0, 81%, 21%);
+}
+
+.bmi .last::before {
+    content: "Your BMI is :  ";
+}
+
+.bmi .classification {
+    color: white;
+    background-color: hsl(0, 81%, 21%);
+    width: 160px;
+    display: none;
+}
+/* end bmi */
+
+
