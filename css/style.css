@@ -53,11 +53,9 @@ html {
 
 
 /* start nav */
-
-
-.navbar img {
-    width: 220px;
-}
+/* .navbar img {
+    width: 200px;
+} */
 
 .navbar .navbar-nav .nav-link {
     color: white;
@@ -110,7 +108,7 @@ html {
 
 @media (max-width: 576px) {
     html {
-        font-size: 70%;
+        font-size: 77%;
     }
 }
 
@@ -176,28 +174,17 @@ html {
 
 .second-sec .feat .icon {
     color: var(--bs-main);
+    background-color: var(--bs-black);
     width: fit-content;
     height: fit-content;
     position: relative;
-    padding: 7px 12px;
+    padding: 14px 14px;
+    border-radius: 50%;
     transition: 0.3s;
 }
 
 .second-sec .feat .content h3 {
-    letter-spacing: -2px;
-}
-
-.second-sec .feat .icon::before {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    left: 0;
-    top: 0;
-    background-color: var(--bs-black);
-    opacity: 0.3;
-    transform: rotate(45deg);
-    transition: 0.3s;
+    letter-spacing: -1px;
 }
 
 @media (max-width:576px) {
@@ -294,7 +281,7 @@ html {
 .program .feat svg {
     color: var(--bs-main);
     background-color: var(--bs-black);
-    padding: 20px 20px;
+    padding: 18px 18px;
     border-radius: 50%;
 }
 
@@ -307,7 +294,7 @@ html {
 }
 
 .program .content h3 {
-    letter-spacing: -2px;
+    letter-spacing: -1px;
 }
 
 
@@ -444,6 +431,15 @@ html {
     }
     .footer .forth {
         margin-top: 30px;
+    }
+}
+
+@media (max-width : 331px) {
+    .footer .first .content p {
+        margin-top: 18px;
+    }
+    .footer .first .content .par {
+        margin-top: 13px;
     }
 }
 

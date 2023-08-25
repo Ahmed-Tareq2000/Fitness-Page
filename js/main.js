@@ -3,10 +3,11 @@ let btn = document.getElementById("mybtn");
 window.onscroll = function () {
   if (scrollY > 600) {
     btn.style.display = "block";
-  } else {
+  } else{
     btn.style.display = "none";
   }
 };
+
 
 btn.onclick = function () {
     scroll({
